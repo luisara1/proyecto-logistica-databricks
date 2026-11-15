@@ -6,16 +6,25 @@ from pyspark.sql import functions as F
 # CAPA GOLD
 # ============================================================
 
-CATALOG = "proyecto_datalake_dev"
+dbutils.widgets.text("environment", "dev")
+
+ENVIRONMENT = dbutils.widgets.get("environment").strip().lower()
+
+if ENVIRONMENT == "prod":
+    CATALOG = "proyecto_datalake_prod"
+elif ENVIRONMENT == "dev":
+    CATALOG = "proyecto_datalake_dev"
+else:
+    raise ValueError(
+        f"Ambiente no valido: {ENVIRONMENT}. "
+        "Valores permitidos: dev, prod"
+    )
+
 SCHEMA_SILVER = "silver"
 SCHEMA_GOLD = "gold"
 
-print("==========================================")
-print("PROYECTO LOGISTICA - CAPA GOLD")
-print("==========================================")
+print(f"Ambiente: {ENVIRONMENT}")
 print(f"Catalogo: {CATALOG}")
-print(f"Origen Silver: {SCHEMA_SILVER}")
-print(f"Destino Gold: {SCHEMA_GOLD}")
 
 # COMMAND ----------
 
