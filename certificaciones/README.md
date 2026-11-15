@@ -6,4 +6,4 @@ Esta carpeta contiene las certificaciones, acreditaciones y evidencias de formac
 * Generative AI Fundamentals: https://credentials.databricks.com/2f2ae115-593c-49b8-bb46-51af70b55f99#acc.kvmItg2W
 * Databricks Platform Administration: https://credentials.databricks.com/1ac41662-1133-49d9-878d-9cbb5df97973#acc.Cd4j02LN
 
-se adjuntan evidencias en el archivo pdf: "Certificaciones de Databricks de Luis Alexander Aragón Sosa.pdf"
+Se adjuntan evidencias en el archivo pdf: "Certificaciones de Databricks de Luis Alexander Aragón Sosa.pdf"
