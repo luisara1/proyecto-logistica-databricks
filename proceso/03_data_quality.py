@@ -6,7 +6,20 @@ from pyspark.sql import functions as F
 # DATA QUALITY - CAPA SILVER
 # ============================================================
 
-CATALOG = "proyecto_datalake_dev"
+dbutils.widgets.text("environment", "dev")
+
+ENVIRONMENT = dbutils.widgets.get("environment").strip().lower()
+
+if ENVIRONMENT == "prod":
+    CATALOG = "proyecto_datalake_prod"
+elif ENVIRONMENT == "dev":
+    CATALOG = "proyecto_datalake_dev"
+else:
+    raise ValueError(
+        f"Ambiente no valido: {ENVIRONMENT}. "
+        "Valores permitidos: dev, prod"
+    )
+
 SCHEMA_SILVER = "silver"
 
 
