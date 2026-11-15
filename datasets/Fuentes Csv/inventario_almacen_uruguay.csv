@@ -1,0 +1,16 @@
+﻿id_registro,id_cliente,id_almacen,nombre_almacen,ciudad_almacen,pais_almacen,id_producto,cantidad,unidad_medida,fecha_inventario,lote,fecha_vencimiento
+INV-UY-001,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,420.0,KG,2026-11-03,LOT-UY-CAR-001,2027-04-15
+INV-UY-002,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,310.0,KG,2026-11-03,LOT-UY-POL-001,2027-03-30
+INV-UY-003,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,180.0,UNIDADES,2026-11-03,LOT-UY-HEL-001,2027-08-31
+INV-UY-004,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,260.0,KG,2026-11-03,LOT-UY-SAL-001,2027-02-28
+INV-UY-005,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,500.0,UNIDADES,2026-11-03,LOT-UY-CHO-001,2027-07-31
+INV-UY-006,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,550.0,KG,2026-11-04,LOT-UY-CAR-002,2027-05-30
+INV-UY-007,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,390.0,KG,2026-11-04,LOT-UY-POL-002,2027-04-30
+INV-UY-008,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,330.0,KG,2026-11-04,LOT-UY-SAL-002,2027-03-15
+INV-UY-009,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,240.0,UNIDADES,2026-11-04,LOT-UY-HEL-002,2027-09-30
+INV-UY-010,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,610.0,UNIDADES,2026-11-04,LOT-UY-CHO-002,2027-08-31
+INV-UY-011,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,470.0,KG,2026-11-05,LOT-UY-CAR-003,2027-06-15
+INV-UY-012,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,440.0,KG,2026-11-05,LOT-UY-POL-003,2027-05-31
+INV-UY-013,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,290.0,UNIDADES,2026-11-05,LOT-UY-HEL-003,2027-10-31
+INV-UY-014,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,360.0,KG,2026-11-05,LOT-UY-SAL-003,2027-04-15
+INV-UY-015,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,720.0,UNIDADES,2026-11-05,LOT-UY-CHO-003,2027-09-30

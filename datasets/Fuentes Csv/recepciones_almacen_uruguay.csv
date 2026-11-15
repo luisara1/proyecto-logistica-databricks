@@ -1,0 +1,11 @@
+﻿id_orden_recepcion,id_cliente,id_almacen,nombre_almacen,ciudad_almacen,pais_almacen,id_producto,cantidad,unidad_medida,fecha_recepcion,estado
+REC-UY-001,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,200.0,KG,2026-11-01 08:30:00,RECIBIDA
+REC-UY-002,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,100.0,UNIDADES,2026-11-01 10:15:00,RECIBIDA
+REC-UY-003,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,150.0,KG,2026-11-01 13:20:00,RECIBIDA
+REC-UY-004,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,250.0,UNIDADES,2026-11-02 09:00:00,RECIBIDA
+REC-UY-005,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,300.0,KG,2026-11-02 11:45:00,RECIBIDA
+REC-UY-006,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,180.0,KG,2026-11-02 15:30:00,RECIBIDA
+REC-UY-007,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,140.0,UNIDADES,2026-11-03 07:50:00,RECIBIDA
+REC-UY-008,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,320.0,UNIDADES,2026-11-03 12:10:00,RECIBIDA
+REC-UY-009,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,220.0,KG,2026-11-04 08:40:00,RECIBIDA
+REC-UY-010,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,190.0,KG,2026-11-04 14:25:00,RECIBIDA
