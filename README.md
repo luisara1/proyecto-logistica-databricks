@@ -62,25 +62,35 @@ El proyecto busca resolver la fragmentación de información mediante una plataf
 * recepciones_almacen_uruguay.csv
 * ordenes_salida_almacen_uruguay.csv
 
-# INGESTA
+## INGESTA
 
+###  Azure SQL → RAW
+
+```text
 WMS-LOGISTICA
-       ↓
+      ↓
 PL_INGEST_SQL_RAW
-       ↓
+      ↓
+Azure Data Factory
+      ↓
 ADLS Gen2
-       ↓
+      ↓
 raw/azure-sql/
-
-
+```
+###  Fuente Manual CSV → RAW
+```text
 source/uruguay/
-       ↓
+      ↓
 PL_INGEST_URUGUAY_RAW
-       ↓
+      ↓
+Azure Data Factory
+      ↓
+ADLS Gen2
+      ↓
 raw/uruguay/
-
-
-# WORKGFLOWS 
+```
+# WORKFLOWS 
+```text
 1_BRONZE_INGESTION
         ↓
 2_SILVER_TRANSFORMATION
@@ -89,9 +99,9 @@ raw/uruguay/
         ↓
 4_GOLD_MODEL
 
-
+```
 # Estructura del repositorio
-
+```text
 proyecto-logistica-databricks/
 │
 ├── .github/
@@ -108,7 +118,7 @@ proyecto-logistica-databricks/
 │
 ├── .gitignore
 └── README.md
-
+```
 # CONCLUSIONES
 La solución demuestra un flujo completo de ingeniería de datos utilizando servicios Azure y Databricks.
 La separación entre RAW, Bronze, Silver y Gold proporciona trazabilidad y desacoplamiento entre fuentes y consumidores.
