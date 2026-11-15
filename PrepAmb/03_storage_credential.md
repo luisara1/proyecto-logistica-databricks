@@ -111,7 +111,7 @@ La External Location vincula una ruta de ADLS Gen2 con el Storage Credential def
 Formato general de una ruta:
 
 ```text
-abfss://<contenedor>@<storage-account>.dfs.core.windows.net/<ruta>
+abfss://raw@stprylogistica2026.dfs.core.windows.net/
 ```
 
 La External Location permite gobernar el acceso a una ubicación específica del almacenamiento mediante permisos de Unity Catalog.
