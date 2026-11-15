@@ -1,0 +1,59 @@
+
+name: CI - Logistica Databricks
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validar-notebooks:
+    name: Validar notebooks PySpark
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v6
+
+      - name: Configurar Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Verificar notebooks requeridos
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          notebooks = [
+              "01_bronze_ingestion.py",
+              "02_silver_transformation.py",
+              "03_data_quality.py",
+              "04_gold_model.py",
+          ]
+
+          for notebook in notebooks:
+              ruta = Path("proceso") / notebook
+              assert ruta.is_file(), f"Falta: {ruta}"
+              print(f"OK: {ruta}")
+          PY
+
+      - name: Validar sintaxis Python
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          for archivo in sorted(Path("proceso").glob("*.py")):
+              codigo = archivo.read_text(encoding="utf-8")
+              compile(codigo, str(archivo), "exec")
+              print(f"Sintaxis OK: {archivo}")
+          PY
+
+      - name: Finalizar validacion CI
+        run: echo "Validacion CI completada"

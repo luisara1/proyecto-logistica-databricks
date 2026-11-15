@@ -1,0 +1,11 @@
+﻿id_orden_salida,id_cliente,id_almacen,nombre_almacen,ciudad_almacen,pais_almacen,id_producto,cantidad,unidad_medida,fecha_salida,estado
+SAL-UY-001,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,60.0,KG,2026-11-02 08:00:00,DESPACHADA
+SAL-UY-002,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,30.0,UNIDADES,2026-11-02 14:00:00,DESPACHADA
+SAL-UY-003,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,50.0,KG,2026-11-03 09:30:00,DESPACHADA
+SAL-UY-004,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,80.0,UNIDADES,2026-11-03 16:15:00,DESPACHADA
+SAL-UY-005,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD001,90.0,KG,2026-11-04 07:45:00,DESPACHADA
+SAL-UY-006,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,55.0,KG,2026-11-04 13:50:00,DESPACHADA
+SAL-UY-007,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD003,45.0,UNIDADES,2026-11-04 15:20:00,DESPACHADA
+SAL-UY-008,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD005,100.0,UNIDADES,2026-11-05 08:10:00,DESPACHADA
+SAL-UY-009,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD002,70.0,KG,2026-11-05 11:25:00,DESPACHADA
+SAL-UY-010,CLI006,ALM006,Centro Logistico Montevideo Manual,Montevideo,Uruguay,PROD004,65.0,KG,2026-11-05 16:40:00,DESPACHADA

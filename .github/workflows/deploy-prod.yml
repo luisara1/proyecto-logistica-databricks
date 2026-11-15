@@ -1,0 +1,56 @@
+name: CD - Deploy Databricks PROD
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "proceso/**"
+      - ".github/workflows/deploy-prod.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  deploy-prod:
+    name: Deploy notebooks to Databricks PROD
+    runs-on: ubuntu-latest
+
+    environment:
+      name: prod
+
+    env:
+      DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
+      DATABRICKS_CLIENT_ID: ${{ vars.DATABRICKS_CLIENT_ID }}
+      DATABRICKS_CLIENT_SECRET: ${{ secrets.DATABRICKS_CLIENT_SECRET }}
+
+    steps:
+
+      - name: Descargar repositorio
+        uses: actions/checkout@v6
+
+      - name: Instalar Databricks CLI
+        uses: databricks/setup-cli@main
+
+      - name: Validar autenticacion Databricks PROD
+        run: |
+          databricks current-user me
+
+      - name: Crear directorio proceso en PROD
+        run: |
+          databricks workspace mkdirs /Shared/proceso
+
+      - name: Desplegar notebooks PySpark a PROD
+        run: |
+          databricks workspace import-dir \
+            proceso \
+            /Shared/proceso \
+            --overwrite
+
+      - name: Validar notebooks desplegados
+        run: |
+          databricks workspace list /Shared/proceso
+
+      - name: Finalizar deployment
+        run: |
+          echo "Deployment a Databricks PROD completado correctamente"
