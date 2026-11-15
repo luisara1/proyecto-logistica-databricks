@@ -13,9 +13,25 @@ from pyspark.sql.types import (
 # CAPA SILVER
 # ============================================================
 
-CATALOG = "proyecto_datalake_dev"
+dbutils.widgets.text("environment", "dev")
+
+ENVIRONMENT = dbutils.widgets.get("environment").strip().lower()
+
+if ENVIRONMENT == "prod":
+    CATALOG = "proyecto_datalake_prod"
+elif ENVIRONMENT == "dev":
+    CATALOG = "proyecto_datalake_dev"
+else:
+    raise ValueError(
+        f"Ambiente no valido: {ENVIRONMENT}. "
+        "Valores permitidos: dev, prod"
+    )
+
 SCHEMA_BRONZE = "bronze"
 SCHEMA_SILVER = "silver"
+
+print(f"Ambiente: {ENVIRONMENT}")
+print(f"Catalogo: {CATALOG}")
 
 
 print("PROYECTO LOGISTICA - CAPA SILVER : ")
