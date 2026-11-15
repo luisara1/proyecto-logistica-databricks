@@ -18,50 +18,18 @@ El proyecto busca resolver la fragmentación de información mediante una plataf
 * Automatizar despliegues entre DEV y PROD.
 * Exponer información analítica mediante Power BI.
 
-# DISEÑO VISUAL
+# DISEÑO VISUAL DASHBOARD
 <img width="1785" height="910" alt="image" src="https://github.com/user-attachments/assets/9488bf77-0ee8-4c9f-838e-e01af5c63685" />
 
 <img width="1739" height="867" alt="image" src="https://github.com/user-attachments/assets/85b88f4d-29cb-43a1-a3a2-eabd2a3645de" />
 
 # ARQUITECTURA
-Azure SQL Database                 CSV Uruguay
-WMS-LOGISTICA                     Almacén Manual
-        │                               │
-        └──────────────┬────────────────┘
-                       │
-                       ▼
-              Azure Data Factory
-                       │
-                       ▼
-              ADLS Gen2 - RAW
-                       │
-                Managed Identity
-                       │
-                       ▼
-                Azure Databricks
-                       │
-                       ▼
-                    BRONZE
-                    brz_*
-                       │
-                     PySpark
-                       │
-                       ▼
-                    SILVER
-                    slv_*
-                       │
-                 Data Quality
-                       │
-                     PySpark
-                       │
-                       ▼
-                     GOLD
-                     gld_*
-                       │
-              ┌────────┴────────┐
-              │                 │
-              ▼                 ▼
-        Delta Sharing        Power BI
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/27e31d51-b0b1-47ef-98b0-49bc01038a66" />
+
+
+
+# DIAGRAMA DE FLUJO DE LA ARQUITECTURA 
+<img width="2380" height="1330" alt="image" src="https://github.com/user-attachments/assets/b1d6037d-be60-41db-987b-ed5569392f07" />
 
 
 # TECNOLOGIAS 
