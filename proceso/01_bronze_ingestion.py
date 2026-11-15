@@ -3,17 +3,31 @@
 from pyspark.sql import functions as F
 
 # ============================================================
-# PROYECTO LOGISTICA
-# CAPA BRONZE
+# CONFIGURACION DE AMBIENTE
 # ============================================================
 
-CATALOG = "proyecto_datalake_dev"
+dbutils.widgets.text("environment", "dev")
+
+ENVIRONMENT = dbutils.widgets.get("environment").strip().lower()
+
+if ENVIRONMENT == "prod":
+    CATALOG = "proyecto_datalake_prod"
+elif ENVIRONMENT == "dev":
+    CATALOG = "proyecto_datalake_dev"
+else:
+    raise ValueError(
+        f"Ambiente no valido: {ENVIRONMENT}. "
+        "Valores permitidos: dev, prod"
+    )
+
 SCHEMA_BRONZE = "bronze"
 
 RAW_BASE = "abfss://raw@stprylogistica2026.dfs.core.windows.net"
 
-print("PROYECTO LOGISTICA - CAPA BRONZE : ")
-
+print("==========================================")
+print("PROYECTO LOGISTICA - CAPA BRONZE")
+print("==========================================")
+print(f"Ambiente: {ENVIRONMENT}")
 print(f"Catalogo: {CATALOG}")
 print(f"Schema Bronze: {SCHEMA_BRONZE}")
 print(f"RAW: {RAW_BASE}")
